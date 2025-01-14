@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Patients"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="PATIENTS"
+  AliasName="Patients"
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  <Attribute
+    Name="PatientId"
+    IsNotNull="true"
+    Precision="10"
+    Scale="0"
+    ColumnName="PATIENT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="PATIENTS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FirstName"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PATIENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastName"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PATIENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Email"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PATIENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+    <validation:RegExpValidationBean
+      Name="EmailRule0"
+      OnAttribute="Email"
+      Pattern="^[A-Za-z0-9+_.-]+@(.+)$"
+      Inverse="false"
+      ResId="eo.Patients.Email_Rule_0"/>
+  </Attribute>
+  <Attribute
+    Name="Password"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PATIENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Gender"
+    Precision="80"
+    ColumnName="GENDER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PATIENTS"/>
+  <AccessorAttribute
+    Name="Appointments"
+    Association="eo.AppointmentsPatientsFk1Assoc"
+    AssociationEnd="eo.AppointmentsPatientsFk1Assoc.Appointments"
+    AssociationOtherEnd="eo.AppointmentsPatientsFk1Assoc.Patients"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Payments"
+    Association="eo.PaymentsPatientsFk1Assoc"
+    AssociationEnd="eo.PaymentsPatientsFk1Assoc.Payments"
+    AssociationOtherEnd="eo.PaymentsPatientsFk1Assoc.Patients"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="EmailAltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PATIENTS"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="eo.Patients.Email"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PatientsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PATIENTS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="eo.Patients.PatientId"/>
+    </AttrArray>
+  </Key>
+  <validation:UniqueKeyValidationBean
+    Name="PatientsRule0"
+    ResId="eo.Patients_Rule_0"
+    KeyName="EmailAltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Email"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Appointment.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelFormLayout id="pfl1">
+                <af:inputText value="#{bindings.AppointmentId.inputValue}" label="#{bindings.AppointmentId.hints.label}"
+                              required="#{bindings.AppointmentId.hints.mandatory}"
+                              columns="#{bindings.AppointmentId.hints.displayWidth}"
+                              maximumLength="#{bindings.AppointmentId.hints.precision}"
+                              shortDesc="#{bindings.AppointmentId.hints.tooltip}" id="it1">
+                    <f:validator binding="#{bindings.AppointmentId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.AppointmentId.format}"/>
+                </af:inputText>
+                <af:inputDate value="#{bindings.AppointmentDate.inputValue}"
+                              label="#{bindings.AppointmentDate.hints.label}"
+                              required="#{bindings.AppointmentDate.hints.mandatory}"
+                              columns="#{bindings.AppointmentDate.hints.displayWidth}"
+                              shortDesc="#{bindings.AppointmentDate.hints.tooltip}" id="id1">
+                    <f:validator binding="#{bindings.AppointmentDate.validator}"/>
+                    <af:convertDateTime pattern="#{bindings.AppointmentDate.format}"/>
+                </af:inputDate>
+                <af:inputText value="#{bindings.AppointmentTime.inputValue}"
+                              label="#{bindings.AppointmentTime.hints.label}"
+                              required="#{bindings.AppointmentTime.hints.mandatory}"
+                              columns="#{bindings.AppointmentTime.hints.displayWidth}"
+                              maximumLength="#{bindings.AppointmentTime.hints.precision}"
+                              shortDesc="#{bindings.AppointmentTime.hints.tooltip}" id="it2">
+                    <f:validator binding="#{bindings.AppointmentTime.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.PatientId.inputValue}" label="#{bindings.PatientId.hints.label}"
+                              required="#{bindings.PatientId.hints.mandatory}"
+                              columns="#{bindings.PatientId.hints.displayWidth}"
+                              maximumLength="#{bindings.PatientId.hints.precision}"
+                              shortDesc="#{bindings.PatientId.hints.tooltip}" id="it3">
+                    <f:validator binding="#{bindings.PatientId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.PatientId.format}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.DoctorId.inputValue}" label="#{bindings.DoctorId.hints.label}"
+                              required="#{bindings.DoctorId.hints.mandatory}"
+                              columns="#{bindings.DoctorId.hints.displayWidth}"
+                              maximumLength="#{bindings.DoctorId.hints.precision}"
+                              shortDesc="#{bindings.DoctorId.hints.tooltip}" id="it4">
+                    <f:validator binding="#{bindings.DoctorId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.DoctorId.format}"/>
+                </af:inputText>
+                <f:facet name="footer">
+                    <af:panelGroupLayout layout="vertical" id="pgl1">
+                        <af:panelGroupLayout layout="horizontal" id="pgl2">
+                            <af:button actionListener="#{bindings.First.execute}" text="First"
+                                       disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
+                            <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                                       disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b2"/>
+                            <af:button actionListener="#{bindings.Next.execute}" text="Next"
+                                       disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b3"/>
+                            <af:button actionListener="#{bindings.Last.execute}" text="Last"
+                                       disabled="#{!bindings.Last.enabled}" partialSubmit="true" id="b4"/>
+                        </af:panelGroupLayout>
+                        <af:button text="Submit" id="b5"/>
+                        <af:button actionListener="#{bindings.Create.execute}" text="Create"
+                                   disabled="#{!bindings.Create.enabled}" id="b6"/>
+                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                   disabled="#{!bindings.Delete.enabled}" id="b7"/>
+                        <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                   disabled="false" id="b8"/>
+                        <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback"
+                                   disabled="false" immediate="true" id="b9">
+                            <af:resetActionListener/>
+                        </af:button>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelFormLayout>
+        </af:form>
+    </af:document>
+</f:view>

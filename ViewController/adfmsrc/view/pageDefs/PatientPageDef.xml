@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="PatientPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PatientsView1" RangeSize="25" DataControl="AppModuleDataControl" id="PatientsView1Iterator"/>
+    <searchRegion Binds="PatientsView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PatientsView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="PatientsView1Iterator" id="PatientsView1">
+      <nodeDefinition DefName="vo.PatientsView" Name="PatientsView10">
+        <AttrNames>
+          <Item Value="PatientId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Gender"/>
+          <Item Value="Email"/>
+          <Item Value="Password"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="PatientsView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="PatientsView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>
