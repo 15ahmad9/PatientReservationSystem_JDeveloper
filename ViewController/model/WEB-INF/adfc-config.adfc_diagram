@@ -109,6 +109,31 @@
       <property
          name="fromOutcome">appointment</property>
       <property
-         name="sdm:polyPoints">R58,516.8374,302.0845,669.1626,352.24707,L50</property>
+         name="sdm:polyPoints">R55,515.0,300.24707,671.0,352.24707,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View13">
+      <property
+         name="activityId">Home</property>
+      <property
+         name="page">/Home.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Home&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">397.29883</property>
+      <property
+         name="x">285.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase15"
+      from="WildcardControlFlowRule7"
+      to="View13">
+      <property
+         name="fromOutcome">home</property>
+      <property
+         name="sdm:polyPoints">L55,443.0,300.24707,326.0,396.94824,R50</property>
    </ControlFlowCase>
 </SDM>
