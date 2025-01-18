@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="PaymentPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PaymentsView1" RangeSize="25" DataControl="AppModuleDataControl" id="PaymentsView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="PaymentsView1Iterator" id="PaymentsView1">
+      <nodeDefinition DefName="vo.PaymentsView" Name="PaymentsView10">
+        <AttrNames>
+          <Item Value="PaymentId"/>
+          <Item Value="Amount"/>
+          <Item Value="PaymentDate"/>
+          <Item Value="PatientId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

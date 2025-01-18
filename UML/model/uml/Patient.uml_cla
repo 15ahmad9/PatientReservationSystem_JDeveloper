@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20110701' xmlns:uml='http://www.omg.org/spec/UML/20110701'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.1.3.0.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:5df6eb5b-93a4-41d1-9de3-332bc24a392f'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Patient'
+   visibility='public'>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:aff33f73-3cf9-4538-a9ea-18ace3321300'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='patientID'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Integer'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:86f4fe79-f780-4997-87f1-8fb8375c77ee'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='false'
+    name='firstName'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:71f917d0-e301-4f17-b70c-8091f77f1fba'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='false'
+    name='lastName'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:1307e3f5-0827-40b4-b848-4a6c62862f69'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='email'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:fd760016-9af7-428c-b8ad-84d7b816407d'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='false'
+    name='password'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedOperation xmi:type='uml:Operation' xmi:uuid='urn:uuid:6cd8554f-1b09-4f85-977e-c576a4467545'
+    isAbstract='false'
+    isLeaf='false'
+    isQuery='false'
+    isStatic='false'
+    name='register'
+    concurrency='sequential'/>
+  <ownedOperation xmi:type='uml:Operation' xmi:uuid='urn:uuid:87e70f4a-8ca9-4192-9e9a-c3f148a85a64'
+    isAbstract='false'
+    isLeaf='false'
+    isQuery='false'
+    isStatic='false'
+    name='login'
+    concurrency='sequential'/>
+  <ownedOperation xmi:type='uml:Operation' xmi:uuid='urn:uuid:c566e692-fced-4612-856f-c3d4567d2cec'
+    isAbstract='false'
+    isLeaf='false'
+    isQuery='false'
+    isStatic='false'
+    name='updateProfile'
+    concurrency='sequential'/>
+ </uml:Class>
+</xmi:XMI>

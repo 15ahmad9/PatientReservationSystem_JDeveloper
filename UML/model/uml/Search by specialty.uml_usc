@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20110701' xmlns:uml='http://www.omg.org/spec/UML/20110701'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.1.3.0.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:9f9bc7ef-011b-4963-af26-1264dfe5b183'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Search by specialty'
+   visibility='public'>
+  <generalization xmi:type='uml:Generalization' xmi:uuid='urn:uuid:0d80def8-1482-4cf7-a626-450c46ee51a6'
+    isSubstitutable='true'>
+   <general href='urn:uuid:f9bff365-7c51-408d-a342-113f59df5516'/>
+  </generalization>
+ </uml:UseCase>
+</xmi:XMI>

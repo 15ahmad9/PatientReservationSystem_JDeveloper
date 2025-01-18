@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Doctor.jsf" id="d1">
-        <af:button text="Patient" id="b5" action="patient"/>
         <af:messages id="m1"/>
         <af:form id="f1">
+            <af:button text="Patient" id="b5" action="patient"/>
+            <af:button text="Appointment" id="b6" action="appointment"/>
+            <af:button text="Payment" id="b7" action="payment"/>
             <af:panelFormLayout id="pfl2">
                 <af:inputText value="#{bindings.DoctorId.inputValue}" label="#{bindings.DoctorId.hints.label}"
                               required="#{bindings.DoctorId.hints.mandatory}"

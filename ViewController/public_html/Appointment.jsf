@@ -3,6 +3,9 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Appointment.jsf" id="d1">
         <af:messages id="m1"/>
+        <af:button text="Patient" id="b10" action="patient"/>
+        <af:button text="Doctor" id="b11" action="doctor"/>
+        <af:button text="Payment" id="b12" action="payment"/>
         <af:form id="f1">
             <af:panelFormLayout id="pfl1">
                 <af:inputText value="#{bindings.AppointmentId.inputValue}" label="#{bindings.AppointmentId.hints.label}"

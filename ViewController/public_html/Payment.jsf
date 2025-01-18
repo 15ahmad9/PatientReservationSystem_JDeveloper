@@ -2,6 +2,62 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Payment.jsf" id="d1">
-        <af:form id="f1"></af:form>
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:button text="Patient" id="b1" action="patient"/>
+            <af:button text="Doctor" id="b2" action="doctor"/>
+            <af:button text="Appointment" id="b3" action="appointment"/>
+            <af:table value="#{bindings.PaymentsView1.collectionModel}" var="row"
+                      rows="#{bindings.PaymentsView1.rangeSize}"
+                      emptyText="#{bindings.PaymentsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" selectedRowKeys="#{bindings.PaymentsView1.collectionModel.selectedRow}"
+                      rowSelection="multiple" fetchSize="#{bindings.PaymentsView1.rangeSize}" id="t1">
+                <af:column headerText="#{bindings.PaymentsView1.hints.PaymentId.label}" id="c1">
+                    <af:inputText value="#{row.bindings.PaymentId.inputValue}"
+                                  label="#{bindings.PaymentsView1.hints.PaymentId.label}"
+                                  required="#{bindings.PaymentsView1.hints.PaymentId.mandatory}"
+                                  columns="#{bindings.PaymentsView1.hints.PaymentId.displayWidth}"
+                                  maximumLength="#{bindings.PaymentsView1.hints.PaymentId.precision}"
+                                  shortDesc="#{bindings.PaymentsView1.hints.PaymentId.tooltip}" id="it1">
+                        <f:validator binding="#{row.bindings.PaymentId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.PaymentsView1.hints.PaymentId.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.PaymentsView1.hints.Amount.label}" id="c2">
+                    <af:inputText value="#{row.bindings.Amount.inputValue}"
+                                  label="#{bindings.PaymentsView1.hints.Amount.label}"
+                                  required="#{bindings.PaymentsView1.hints.Amount.mandatory}"
+                                  columns="#{bindings.PaymentsView1.hints.Amount.displayWidth}"
+                                  maximumLength="#{bindings.PaymentsView1.hints.Amount.precision}"
+                                  shortDesc="#{bindings.PaymentsView1.hints.Amount.tooltip}" id="it2">
+                        <f:validator binding="#{row.bindings.Amount.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.PaymentsView1.hints.Amount.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.PaymentsView1.hints.PaymentDate.label}" id="c3">
+                    <af:inputDate value="#{row.bindings.PaymentDate.inputValue}"
+                                  label="#{bindings.PaymentsView1.hints.PaymentDate.label}"
+                                  required="#{bindings.PaymentsView1.hints.PaymentDate.mandatory}"
+                                  columns="#{bindings.PaymentsView1.hints.PaymentDate.displayWidth}"
+                                  shortDesc="#{bindings.PaymentsView1.hints.PaymentDate.tooltip}" id="id1">
+                        <f:validator binding="#{row.bindings.PaymentDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.PaymentsView1.hints.PaymentDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.PaymentsView1.hints.PatientId.label}" id="c4">
+                    <af:inputText value="#{row.bindings.PatientId.inputValue}"
+                                  label="#{bindings.PaymentsView1.hints.PatientId.label}"
+                                  required="#{bindings.PaymentsView1.hints.PatientId.mandatory}"
+                                  columns="#{bindings.PaymentsView1.hints.PatientId.displayWidth}"
+                                  maximumLength="#{bindings.PaymentsView1.hints.PatientId.precision}"
+                                  shortDesc="#{bindings.PaymentsView1.hints.PatientId.tooltip}" id="it3">
+                        <f:validator binding="#{row.bindings.PatientId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.PaymentsView1.hints.PatientId.format}"/>
+                    </af:inputText>
+                </af:column>
+            </af:table>
+        </af:form>
     </af:document>
 </f:view>

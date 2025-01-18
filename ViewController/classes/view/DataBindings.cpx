@@ -5,11 +5,15 @@
     <page path="/Patient.jsf" usageId="view_PatientPageDef"/>
     <page path="/Doctor.jsf" usageId="view_DoctorPageDef"/>
     <page path="/Appointment.jsf" usageId="view_AppointmentPageDef"/>
+    <page path="/Payment.jsf" usageId="view_PaymentPageDef"/>
+    <page path="/SearchPatient.jsf" usageId="view_SearchPatientPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_PatientPageDef" path="view.pageDefs.PatientPageDef"/>
     <page id="view_DoctorPageDef" path="view.pageDefs.DoctorPageDef"/>
     <page id="view_AppointmentPageDef" path="view.pageDefs.AppointmentPageDef"/>
+    <page id="view_PaymentPageDef" path="view.pageDefs.PaymentPageDef"/>
+    <page id="view_SearchPatientPageDef" path="view.pageDefs.SearchPatientPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

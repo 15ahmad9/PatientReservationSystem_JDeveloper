@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20110701' xmlns:uml='http://www.omg.org/spec/UML/20110701'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.1.3.0.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:f983ad4f-4dcd-4688-8ae8-15e5555a0b0f'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Doctor'
+   visibility='public'>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:97ee36ec-a6a1-4f61-95fb-c29dc4dc1020'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='doctorID'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Integer'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:5231d03a-255c-401c-bfe4-3ac060e23c38'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='false'
+    name='name'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:81ef16b4-3a9a-43f2-9a4c-7f6cfd57e9af'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='false'
+    name='specialty'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:816dc440-af25-48f2-950e-ffa873b7a791'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='false'
+    name='location'
+    aggregation='none'>
+   <type href='http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#String'/>
+  </ownedAttribute>
+  <ownedOperation xmi:type='uml:Operation' xmi:uuid='urn:uuid:06adcfed-9389-4a9b-a43e-ecd3db5ad14c'
+    isAbstract='false'
+    isLeaf='false'
+    isQuery='false'
+    isStatic='false'
+    name='updateSchedule'
+    concurrency='sequential'/>
+  <ownedOperation xmi:type='uml:Operation' xmi:uuid='urn:uuid:b168d168-e9dc-4a24-8e71-a62e17609e87'
+    isAbstract='false'
+    isLeaf='false'
+    isQuery='false'
+    isStatic='false'
+    name='viewAppointments'
+    concurrency='sequential'/>
+ </uml:Class>
+</xmi:XMI>

@@ -2,22 +2,24 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="Patient.jsf" id="d1">
-        <af:button text="Appointments" id="b6" action="appointment"/>
-        <af:button text="Payment" id="b7" action="payment"/>
         <af:messages id="m1"/>
         <af:form id="f1">
+            <af:button text="Doctor" id="b8" action="doctor"/>
+            <af:button text="Appointments" id="b6" action="appointment"/>
+            <af:button text="Payment" id="b7" action="payment"/>
+            <af:button text="Search Patient" id="b9" action="*searchPatient"/>
             <af:panelCollection id="pc1" styleClass="AFStrechWidth">
                 <f:facet name="menus"/>
                 <f:facet name="toolbar">
                     <af:toolbar id="t2">
                         <af:button actionListener="#{bindings.Create.execute}" text="Add"
-                                   disabled="#{!bindings.Create.enabled}" id="b1"/>
+                                   disabled="false" id="b1"/>
                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                   disabled="#{!bindings.Delete.enabled}" id="b2"/>
+                                   disabled="false" id="b2"/>
                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                   disabled="#{!bindings.Commit.enabled}" id="b3"/>
+                                   disabled="false" id="b3"/>
                         <af:button actionListener="#{bindings.Rollback.execute}" text="Cancel"
-                                   disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b4">
+                                   disabled="false" immediate="true" id="b4">
                             <af:resetActionListener/>
                         </af:button>
                     </af:toolbar>

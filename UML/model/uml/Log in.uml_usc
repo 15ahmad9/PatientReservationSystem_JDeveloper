@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20110701' xmlns:uml='http://www.omg.org/spec/UML/20110701'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.1.3.0.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:b8c9c5fc-b4db-45d0-88b8-6366a2f64357'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Log in'
+   visibility='public'>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:68c3b946-b65c-4358-b11b-072a7cc4b79a'>
+   <addition href='urn:uuid:de96f821-80f4-46e0-991e-fcd6f0804442'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:b2de061f-1aa9-4ff5-a63a-e354922070e6'>
+   <addition href='urn:uuid:880bf838-63b4-4b9e-82cb-d54e97e07f00'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:dcba1149-75d1-4f37-a114-06f7dc79c57f'>
+   <addition href='urn:uuid:dca2a239-3026-4857-bf7f-d9a375339064'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:0440e880-b01b-43bb-a221-45916fbfc29a'>
+   <addition href='urn:uuid:eb74fcaa-486a-433f-aa18-4c516d51eb0e'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:8a94972f-02f3-4a58-8740-f3f40ef11b8c'>
+   <addition href='urn:uuid:06daadf8-9062-4645-a6a9-772db811a2d4'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:6a5b4ffb-7914-4da4-9387-384d1e6a6985'>
+   <addition href='urn:uuid:ce4263a8-af00-4721-92f4-356b3a030c41'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:a507cb0b-ee34-405a-b972-cb9f15710aae'>
+   <addition href='urn:uuid:0a2786d0-39f4-4b08-8bdb-aa2e70352321'/>
+  </include>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:c1523b44-666e-4a0d-bad3-974efe335a84'>
+   <addition href='urn:uuid:1083b242-25ac-43bf-80f3-1ccaf845178e'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document title="Home.jsf" id="d1">
+    <af:panelGroupLayout id="pgl1" inlineStyle="font-weight:bold; font-size:x-large;">
+      <af:outputText value="Welcome to Patient Reservation System" id="ot1"/>
+    </af:panelGroupLayout>
     <af:form id="f1">
       <af:button text="Patient" id="b1" action="patient"/>
       <af:button text="Doctor" id="b2" action="doctor"/>

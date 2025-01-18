@@ -28,9 +28,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">200.59766</property>
+         name="y">206.89648</property>
       <property
-         name="x">218.0</property>
+         name="x">258.0</property>
    </View>
    <View
       id="View5">
@@ -89,7 +89,7 @@
       <property
          name="fromOutcome">patient</property>
       <property
-         name="sdm:polyPoints">L50,441.1626,296.7471,260.8374,200.24706,R50</property>
+         name="sdm:polyPoints">L45,443.0,293.24707,299.0,206.5459,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -122,9 +122,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">397.29883</property>
+         name="y">397.59766</property>
       <property
-         name="x">285.0</property>
+         name="x">268.0</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -134,6 +134,31 @@
       <property
          name="fromOutcome">home</property>
       <property
-         name="sdm:polyPoints">L55,443.0,300.24707,326.0,396.94824,R50</property>
+         name="sdm:polyPoints">L55,443.0,300.24707,309.0,397.24707,R50</property>
+   </ControlFlowCase>
+   <View
+      id="View18">
+      <property
+         name="activityId">SearchPatient</property>
+      <property
+         name="page">/SearchPatient.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>SearchPatient&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">477.59766</property>
+      <property
+         name="x">525.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase19"
+      from="WildcardControlFlowRule7"
+      to="View18">
+      <property
+         name="fromOutcome">*searchPatient</property>
+      <property
+         name="sdm:polyPoints">B50,479.0,339.24707,525.0,423.24707,T50</property>
    </ControlFlowCase>
 </SDM>
